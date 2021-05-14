@@ -19,7 +19,7 @@ BN_MOMENTUM = 0.1
 logger = logging.getLogger(__name__)
 
 def get_model_url(data='imagenet', name='dla34', hash='ba72cf86'):
-    return join('http://dl.yf.io/dla/models', data, '{}-{}.pth'.format(name, hash))
+    return join('http://dl.yf.io/dla/models', data, '{}-{}.pth'.format(name, hash)).replace('\\', '/')
 
 
 def conv3x3(in_planes, out_planes, stride=1):
